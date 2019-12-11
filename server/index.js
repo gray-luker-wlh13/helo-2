@@ -24,9 +24,10 @@ massive(CONNECTION_STRING).then(db => {
 // authctrl endpoints
 app.post('/api/auth/register', authCtrl.register);
 app.post('/api/auth/login', authCtrl.login);
+app.post('/api/auth/logout', authCtrl.logout);
 
 //ctrl endpoints
-
+app.get('/api/posts/:userid', ctrl.getPosts);
 
 const port = SERVER_PORT;
 app.listen(port, () => console.log(`Server sprinting on port ${port}`));
