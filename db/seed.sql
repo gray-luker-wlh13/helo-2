@@ -12,3 +12,8 @@ CREATE TABLE posts (
     content TEXT,
     author_id INT REFERENCES users(id)
 );
+
+ALTER TABLE users
+ALTER password
+TYPE VARCHAR(200);
+
